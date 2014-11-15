@@ -38,14 +38,6 @@
 
 	</welcome-file-list>
 
-	<context-param>
-
-		<param-name>primefaces.THEME</param-name>
-
-		<param-value>bootstrap</param-value>
-
-	</context-param>
-
 	<!-- Implementação do CDI com WELD -->
 	<listener>
 
@@ -61,37 +53,5 @@
 
 	</resource-env-ref>
 
-	<!-- Spring security -->
-	<listener>
-
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-
-	</listener>
-
-	<listener>
-
-		<listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
-
-	</listener>
-
-	<filter>
-
-		<filter-name>springSecurityFilterChain</filter-name>
-
-		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-
-	</filter>
-
-	<filter-mapping>
-
-		<filter-name>springSecurityFilterChain</filter-name>
-
-		<url-pattern>/*</url-pattern>
-
-		<dispatcher>FORWARD</dispatcher>
-
-		<dispatcher>REQUEST</dispatcher>
-
-	</filter-mapping>
 
 </web-app>
